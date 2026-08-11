@@ -1,0 +1,21 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### IDE Flat Files ###
+.nebeans
+.classpath
+.project
+.settings/
+.idea/
+*.iml
+*.iws
+*.ipr
+
+### Logs ###
+*.log
+
+### OS Files ###
+.DS_Store
+Thumbs.db
