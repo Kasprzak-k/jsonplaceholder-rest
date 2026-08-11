@@ -1,40 +1,31 @@
-# JSONPlaceholder API - Client Spring Boot
+# JSONPlaceholder REST Client
 
-Projeto Spring Boot configurado para integração e consumo de dados da API pública [JSONPlaceholder](https://jsonplaceholder.typicode.com/).
+API REST desenvolvida em Spring Boot (Java 17) para consumo da API pública [JSONPlaceholder](https://jsonplaceholder.typicode.com/) utilizando `RestClient`.
 
-## 🛠️ Tecnologias Utilizadas
+## 🛠️ Tecnologias
 
-- **Java 17**
-- **Spring Boot 3.x**
-- **Spring Web** (`RestTemplate` / `WebClient`)
-- **Lombok**
-- **Maven**
+- Java 17
+- Spring Boot 3.2.3
+- Spring Web (`RestClient`)
+- Maven
 
-## ⚙️ Configurações
+## 🚀 Como Executar
 
-A URL base da API está configurada em [application.properties](file:///c:/Users/cactu/Downloads/JSONPlaceholderAPI/src/main/resources/application.properties):
+### Pré-requisitos
+- Java 17+
+- Maven
 
-```properties
-jsonplaceholder.api.url=https://jsonplaceholder.typicode.com
-```
-
-## 📂 Endpoints da API JSONPlaceholder disponíveis para integração
-
-- `/posts` - 100 posts
-- `/comments` - 500 comentários
-- `/albums` - 100 álbuns
-- `/photos` - 5000 fotos
-- `/todos` - 200 afazeres
-- `/users` - 10 usuários
-
-## 🚀 Como Rodar
-
-1. Certifique-se de ter o **Java 17** e o **Maven** instalados.
-2. Compile o projeto:
-   ```bash
-   mvn clean install
-   ```
-3. Execute a aplicação após criar a classe principal `@SpringBootApplication`:
+### Passos
+1. Compile e execute a aplicação:
    ```bash
    mvn spring-boot:run
    ```
+
+2. Teste o endpoint no navegador ou terminal:
+   ```bash
+   curl http://localhost:8080/events
+   ```
+
+## 📌 Endpoints
+
+- `GET /events` — Retorna os dados do usuário integrados via `EventService` usando `RestClient`.
