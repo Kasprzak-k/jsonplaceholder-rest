@@ -2,14 +2,14 @@
 
 API REST desenvolvida em Spring Boot (Java 17) para consumo da API pública [JSONPlaceholder](https://jsonplaceholder.typicode.com/) utilizando `RestClient`.
 
-## 🛠️ Tecnologias
+##  Tecnologias
 
 - Java 17
 - Spring Boot 3.2.3
 - Spring Web (`RestClient`)
 - Maven
 
-## 🚀 Como Executar
+##  Como Executar
 
 ### Pré-requisitos
 - Java 17+
@@ -26,6 +26,6 @@ API REST desenvolvida em Spring Boot (Java 17) para consumo da API pública [JSO
    curl http://localhost:8080/events
    ```
 
-## 📌 Endpoints
+##  Endpoints
 
 - `GET /events` — Retorna os dados do usuário integrados via `EventService` usando `RestClient`.
