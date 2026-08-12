@@ -3,6 +3,7 @@ package com.example.jsonplaceholder.controller;
 import com.example.jsonplaceholder.dto.UserResponseDTO;
 import com.example.jsonplaceholder.service.EventService;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,8 +17,8 @@ public class EventController {
         this.eventService = eventService;
     }
 
-    @GetMapping
-    public UserResponseDTO getEvent() {
-        return eventService.getEvent();
+    @GetMapping("/{id}")
+    public UserResponseDTO getEvent(@PathVariable Long id) {
+        return eventService.getEvent(id);
     }
 }

@@ -10,15 +10,17 @@ import com.example.jsonplaceholder.dto.*;
 public class EventService {
 
     private final RestClient restClient;
+    private Long id;
 
     public EventService(RestClient.Builder restClientBuilder, @Value("${jsonplaceholder.api.url}") String apiUrl) {
         this.restClient = restClientBuilder.baseUrl(apiUrl).build();
     }
 
-    public UserResponseDTO getEvent() {
+    public UserResponseDTO getEvent(Long id) {
         return restClient.get()
-                .uri("/users/1")
+                .uri("/users/" + id)
                 .retrieve()
                 .body(UserResponseDTO.class);
+
     }
 }
